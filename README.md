@@ -10,3 +10,19 @@ Manipulate the DOM so that the counter can add one or subtract one from the numb
 You may want to use Javascript's `parseInt` utility to convert a string to an integer.
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+### Setup
+```sh
+# 1- go to warmups
+cd ~/Documents/muktek/warmups
+
+# 2- clone the repo
+git clone git@github.com:muktek/activity--dom-manipulation-conditional-counter.git
+
+# 3- open in the browser
+cd activity--dom-manipulation-conditional-counter
+xdg-open index.html
+
+# 4- open in atom
+atom .
+```
