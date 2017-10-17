@@ -16,8 +16,11 @@ To render properly, each element from the dataset should have the following stru
 
 You can see a demo in the `index.html`.
 
-*NOTE* : The [superagent](https://github.com/visionmedia/superagent) promise library is already included. You will only need to make the request to the api.
-
+*NOTE* : The [superagent](https://github.com/visionmedia/superagent) promise library is already included. You will only need to:
+1. make the request to the api.
+  - https://randomuser.me/api/?results=50
+2. access the returned data inside of the function passed to `.then(...)` promise-handler
+3. format the returned data to a string that can be put on the DOM
 
 ### Setup
 ```sh
