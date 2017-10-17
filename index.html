@@ -2,24 +2,56 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>DOM Manipulations Warmup</title>
+      <title>Promises Request Warmup</title>
       <link rel="stylesheet" href="./css/styles.css">
    </head>
    <body>
       <div id="app-container">
-        <h1>DOM Manipulations Warmup</h1>
-        <div class="component">
-          <button class="btn-decrement">
-            -
-          </button>
-          <span class="total-counts">
-            0
-          </span>
-          <button class="btn-increment">
-            +
-          </button>
+        <h1>Users</h1>
+
+        <!-- Data goes here inside this div:  -->
+        <div class="users-list">
+          <!-- Data properties for each <article> are: 'email' and 'nat'  -->
+
+          <article>
+            <span>US</span>
+            <h6>oliver.petersen@example.com</h6>
+          </article>
+
+          <article>
+            <span>GB</span>
+            <h6>jimmy.wiggins@example.com </h6>
+          </article>
+
+          <article>
+            <span>ES</span>
+            <h6>alejandra.salamanca@example.com </h6>
+          </article>
+
         </div>
+
       </div>
+      <script src="./js/superagent.min.js"></script>
       <script src="./js/app.js"></script>
+      <script>
+        document.querySelector('button')
+          .addEventListener('click', ()=>{
+            request
+              .get('https://randomuser.me/api/?results=50')
+              .then((res)=>{
+                console.log(res)
+                document.querySelector('.users-list').innerHTML =
+                res.body.results.map((u)=>{
+                  return `
+                    <article>
+                      <span>${u.nat}</span>
+                      <h6>${u.email}</h6>
+                    </article>
+                  `
+                }).join('')
+              })
+          })
+
+      </script>
    </body>
 </html>
