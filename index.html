@@ -33,25 +33,5 @@
       </div>
       <script src="./js/superagent.min.js"></script>
       <script src="./js/app.js"></script>
-      <script>
-        document.querySelector('button')
-          .addEventListener('click', ()=>{
-            request
-              .get('https://randomuser.me/api/?results=50')
-              .then((res)=>{
-                console.log(res)
-                document.querySelector('.users-list').innerHTML =
-                res.body.results.map((u)=>{
-                  return `
-                    <article>
-                      <span>${u.nat}</span>
-                      <h6>${u.email}</h6>
-                    </article>
-                  `
-                }).join('')
-              })
-          })
-
-      </script>
    </body>
 </html>
