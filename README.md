@@ -1,4 +1,4 @@
-# JS - DOM Manipulations - Conditional Counter
+# JS - Async Fetch and Render
 
 ### The Demo
 ![demo](images/users-data.png)
