@@ -32,7 +32,8 @@ git clone git@github.com:muktek/activity--async-fetch-and-render.git
 
 # 3- open in the browser
 cd activity--async-fetch-and-render
-xdg-open index.html
+
+# Open index.html file in browser
 
 # 4- open in atom and start work
 atom .
