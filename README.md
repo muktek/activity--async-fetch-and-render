@@ -3,6 +3,8 @@
 ### The Demo
 ![demo](images/users-data.png)
 
+## Normal Mode
+
 ### Description
 Use data from the [Random User API](https://randomuser.me/api/?results=50) and render each user from the results array inside of the `<div>` with a class of `users-list`.
 
@@ -39,12 +41,14 @@ cd activity--async-fetch-and-render
 atom .
 ```
 
+### Explorer Mode
+Use an event listener to trigger the fetching + rendering
+
+![demo](images/fetch-onclick.gif)
+
 ### Notes
 Data source:
 https://randomuser.me/api/?results=50
 
 
-### Extra
-Use an event listener to trigger the fetching + rendering
 
-![demo](images/fetch-onclick.gif)
